@@ -1,18 +1,13 @@
 <a href={Astro.props.enlace}>
-    <slot name="titulo"/>
-    <slot name="contenido">
+    <slot />
   </a>
   
   <style>
       a {
           display: block;
-          padding: .5rem;
           text-decoration: none;
-          color: #000;
-          background-color: #dad6db;
-          border-radius: .5rem;
+          background-color: rgb(248 245 245 / 50%);
+          color:rgb(21, 21, 21); 
       }
-      a:hover {
-          background-color: rgb (242 239 243);
-      }
+      
   </style>

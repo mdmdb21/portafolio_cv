@@ -2,24 +2,28 @@
 import Esqueleto from "../../layouts/Esqueleto.astro"
 ---
 <section>
-    <img width="375" src="public\me.webp" alt="Maria">
-    <header>
-        <h1>María del Mar Duvale Barbeitos</h1>
-        <p>Geógrafa especializada en cartografía y SIG. Actualmente aprediendo diseño de páginas WEB y animación 3D</p>
+    <header class="header">
+            <img width="375" height="375" src="/me.webp" alt="Maria"></div>
+            <h1>María del Mar Duvale Barbeitos</h1>
+            <br>
+            <p>  Geógrafa especializada en cartografía y Sistemas de Información Geográfica. Actualmente aprendiendo diseño de páginas WEB y animación 3D.</p>
+        <br>
+    </header>
+    <div>
         <h2>DATOS PERSONALES.</h2>
         <ul>
-            <li value="nombre">Nombre:
-                <p></p>María del Mar</p>
-            </li>
-            <li value="apellidos">Duvale Barbeitos</li>
-            <li value="email">mar.barbeitos21@gmail.com</li>
-            <li value="telefono">+34 606223344</li>
-            <li value="titulacion">Graduada en geografía y ordenación del territorio.</li>
+            <li value="nombre"><strong>Nombre: </strong>María del Mar</li>
+            <li value="apellidos"><strong>Apellidos: </strong>Duvale Barbeitos</li>
+            <li value="email"><strong>Correo electrónico: </strong>mar.barbeitos21@gmail.com</li>
+            <li value="telefono"><strong>Teléfono: </strong>+34 606223344</li>
+            <li value="titulacion"><strong>Titulación: </strong>Graduada en geografía y ordenación del territorio.</li>
             <li value="resumen">
+                <br>
                 <p>Experiencia en cartografía avanzada y el uso de software especialializado en SIG; ArcMap y QGis. Actualmente aprendiendo a desarrollar páginas WEB y animación 3D.</p>
             </li>
         </ul> 
-    </header>
+        <br>
+    </div>
     
     
 </section> 
@@ -27,11 +31,12 @@ import Esqueleto from "../../layouts/Esqueleto.astro"
 <style> 
     img {
     aspect-ratio: 1 / 1;
-    width: 115px;
-    border-radius: 100%;
+    /* width: 115px; */
+    border-radius: 50%;
     object-fit: cover;
     max-width: 100%;
     object-position: center;
+
     }
     p {
         margin-top: 0;
@@ -40,4 +45,9 @@ import Esqueleto from "../../layouts/Esqueleto.astro"
     h1 {
         margin-bottom: 0;
     }
+    li {
+        list-style: none;
+    }
+
+   
 </style>

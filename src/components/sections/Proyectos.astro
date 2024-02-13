@@ -3,25 +3,65 @@ import Card from "../ui/Card.astro"
 ---
 
 <section>
+    <br>
     <h2>PROYECTOS.</h2>
     <aside>
         <Card enlace="https://egeasantiago.home.blog/youthmappers-at-usc/">   
-            <img src="public\youthmappers.png" alt="youthmappers">
-            <strong slot="titulo">Youthmappers at USC (2019-2020)" </strong>
-            <p slot="contenido">Youthmappers at USC es una organización sin ánimo de lucro organizada por estudiantes del grado de Geografía de la Universidad de Santiago de Compostela para cartografíar zonas remotas de difícil acceso para que pueda llegar ayuda humanitaria a las zonas más desfavorecidas.</p>
+            <div class="img-container">
+                <img src="/youthmappers.png" alt="youthmappers">
+            </div>
+            <div class="content-container">
+                <strong>Youthmappers at USC (2019-2020)</strong>
+                <p>Youthmappers at USC es una organización sin ánimo de lucro organizada por estudiantes del grado de Geografía de la Universidad de Santiago de Compostela para cartografíar zonas remotas de difícil acceso para que pueda llegar ayuda humanitaria a las zonas más desfavorecidas.</p>
+            </div>
         </Card>
+        <br>
         <Card enlace="https://www.campogalego.es/cubicar-madera-vista-de-pajaro/">
-            <img src="public\dron-asefor.jpg" alt="dron"> 
-            <strong slot="titulo">Mediciones precisas de masas forestales usando dron y sistemas LIDAR para el aprovechamiento forestal (2021).</strong>
-            <p slot="contenido"></p>El proyecto de investigación de la Universidad de Santiago de Compostela, en colaboración con la empresa Asefor, busca medir la madera de los montes gallegos con drones y sistemas LIDAR.</p>
+            <div class="img-container">
+                <img src="/dron-asefor.jpg" alt="dron">
+            </div>
+            <div class="content-container">
+                <strong>Mediciones de masas forestales con dron y LIDAR (2021)</strong>
+                <p>Proyecto pionero en Galicia en la predicción de m3 de masa forestal de una parcela usando drones y tecnología LIDAR; mejorando la eficiencia de la gestión forestal y su aprovechamiento económico.</p>
+            </div>
         </Card> 
 
     </aside>
+    <br>
 </section>
 
 <style>
     aside {
         display: grid;
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: .5rem;
+    }
+
+    strong {
+        text-wrap: pretty;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        min-height: 300px;
+        object-fit: cover;
+    }
+
+    .content-container {
+        padding: 1rem;
+    }
+
+    .img-container {
+        position: relative;
+        overflow: hidden;
+        box-shadow: ;
+    }
+    .img-container img {
+        transition: transform 0.5s;
+    }
+
+    .img-container img:hover{
+        transform: scale(1.1);
     }
 </style>
