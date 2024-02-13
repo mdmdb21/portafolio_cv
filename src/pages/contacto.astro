@@ -2,14 +2,17 @@
 import Esqueleto from "../layouts/Esqueleto.astro";
 ---
 <Esqueleto titulo="Página de Contacto" idioma="es">
-    
+    <a href="/contacto"></a>
     <form>
         <fieldset>
             <legend>Contacta conmigo!</legend>
-            <input name="nombre" type="text" placeholder="María" required>Nombre
-            <input name="apellido" type="text" placeholder="Duvale Barbeitos" required>Apellido
-            <textarea>
+            <label>Nombre: <input name="nombre" type="text" placeholder="María" required></label>
+            <label>Apellidos: <input name="apellido" type="text" placeholder="Duvale Barbeitos" required></label>
+            <label>Correo electrónico: <input type="email" name="email" placeholder="maria@gmail.com" required></label>
+            <textarea rows="3" cols="20">Deja aquí tu comentario</textarea>
         </fieldset>
+        <button type="reset" name="reset_btn" value="reset_btn">Reiniciar</button>
+        <button type="submit" name="enviar_btn" value="enviar_btn">Enviar</button>
     </form>
     
 </Esqueleto> 
