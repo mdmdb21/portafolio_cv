@@ -1,15 +1,16 @@
 ---
 import Esqueleto from "../layouts/Esqueleto.astro";
+
 ---
 <Esqueleto titulo="Página de Contacto" idioma="es">
-        <a href="/contacto"></a>
-        <form>
+        
+        <form class="formulario-contacto">
             <fieldset class="dts_prsonales">
                 <legend class="titulo">Contacta conmigo!</legend>
                 <label>Nombre: <input name="nombre" type="text" placeholder="María" required></label>
                 <label>Apellidos: <input name="apellido" type="text" placeholder="Duvale Barbeitos" required></label>
-                <label>Correo electrónico: <input type="email" name="email" placeholder="maria@gmail.com" required></label>
-                <textarea rows="10" cols="40">Deja aquí tu comentario</textarea>
+                <label>Email: <input type="email" name="email" placeholder="maria@gmail.com" required></label>
+                <textarea rows="15" cols="30">Deja aquí tu comentario</textarea>
             </fieldset>
             <fieldset class="botones">
                 <button type="reset" name="reset_btn" value="reset_btn">Reiniciar</button>
@@ -20,30 +21,41 @@ import Esqueleto from "../layouts/Esqueleto.astro";
 </Esqueleto> 
 
 <style>
+    .formulario-contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border-style: none; 
+        width: 100%;
+
+    }
     
     .dts_prsonales {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 1em;
-        padding: 1em;
-        border: 1px solid #ccc;
-        border-style: solid none;
+        justify-content: space-around;
+        border-style: none;
+        width: 40%;
     }
     
     .titulo {
         font-size: 1.5em;
-        font-weight: bold;
-        margin-bottom: 1em; 
+        font-weight: bold; 
         display: flex;
-        justify-content: center;
+        text-align: center;
+        gap: 1rem;
     }
     
-    .btn {
+    .botones {
         border-style: none;
         display: flex;
-        align-items: end;
+        flex-direction: row;    
+        justify-content: space-around;  
+        width: 40%;
     }
+      
 
     
     

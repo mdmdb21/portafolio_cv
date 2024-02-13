@@ -10,14 +10,17 @@ import Esqueleto from "../../layouts/Esqueleto.astro"
         <br>
     </header>
     <div>
-        <h2>DATOS PERSONALES.</h2>
+        <svg id="dtos_personales_icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Zm6-10.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0Zm1.294 6.336a6.721 6.721 0 0 1-3.17.789 6.721 6.721 0 0 1-3.168-.789 3.376 3.376 0 0 1 6.338 0Z" />
+          </svg><h2>DATOS PERSONALES.</h2>
+
         <ul>
-            <li value="nombre"><strong>Nombre: </strong>María del Mar</li>
-            <li value="apellidos"><strong>Apellidos: </strong>Duvale Barbeitos</li>
-            <li value="email"><strong>Correo electrónico: </strong>mar.barbeitos21@gmail.com</li>
-            <li value="telefono"><strong>Teléfono: </strong>+34 606223344</li>
-            <li value="titulacion"><strong>Titulación: </strong>Graduada en geografía y ordenación del territorio.</li>
-            <li value="resumen">
+            <li class="nombre"><strong>Nombre: </strong>María del Mar.</li>
+            <li class="apellidos"><strong>Apellidos: </strong>Duvale Barbeitos.</li>
+            <li class="email"><strong>Correo electrónico: </strong>mar.barbeitos21@gmail.com</li>
+            <li class="telefono"><strong>Teléfono: </strong>+34 606223344.</li>
+            <li class="titulacion"><strong>Titulación: </strong>Graduada en geografía y ordenación del territorio.</li>
+            <li class="resumen">
                 <br>
                 <p>Experiencia en cartografía avanzada y el uso de software especialializado en SIG; ArcMap y QGis. Actualmente aprendiendo a desarrollar páginas WEB y animación 3D.</p>
             </li>
@@ -29,15 +32,26 @@ import Esqueleto from "../../layouts/Esqueleto.astro"
 </section> 
 
 <style> 
+     #dtos_personales_icon {
+        width: 40px;
+        height: 40px;
+        
+    }
+    h2, #dtos_personales_icon {
+        display: inline-block;
+        vertical-align: middle;
+        
+    }
     img {
-    aspect-ratio: 1 / 1;
-    /* width: 115px; */
-    border-radius: 50%;
-    object-fit: cover;
-    max-width: 100%;
-    object-position: center;
+        aspect-ratio: 1 / 1;
+        /* width: 115px; */
+        border-radius: 50%;
+        object-fit: cover;
+        max-width: 100%;
+        object-position: center;
 
     }
+    
     p {
         margin-top: 0;
     
@@ -46,7 +60,7 @@ import Esqueleto from "../../layouts/Esqueleto.astro"
         margin-bottom: 0;
     }
     li {
-        list-style: none;
+        list-style:none
     }
 
    
