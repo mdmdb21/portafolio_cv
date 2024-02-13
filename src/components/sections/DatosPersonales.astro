@@ -1,6 +1,7 @@
 ---
 import Esqueleto from "../../layouts/Esqueleto.astro"
 ---
+<h1 class="title">Portafolio María Duvale</h1>
 <section>
     <header class="header">
             <img width="375" height="375" src="/me.webp" alt="Maria"></div>
@@ -42,13 +43,22 @@ import Esqueleto from "../../layouts/Esqueleto.astro"
         vertical-align: middle;
         
     }
+    .title {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        font-size: .9rem;
+        gap: 2rem;
+        
+    }
     img {
         aspect-ratio: 1 / 1;
         /* width: 115px; */
         border-radius: 50%;
         object-fit: cover;
         max-width: 100%;
-        object-position: center;
+        object-position: top;
+        /* object-position: center; */
 
     }
     
