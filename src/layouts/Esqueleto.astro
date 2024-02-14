@@ -1,3 +1,7 @@
+---
+import InicioIcon from "../components/icons/Inicio_Icon.astro"
+import ContactoIcon from "../components/icons/Contacto_Icon.astro"
+---
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,15 +12,13 @@
 
 <main class="main-container">
     <nav>
-       <a href="http://localhost:4321/">Inicio
-            <svg id="inicio_icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+       <a href="http://localhost:4321/"><span>Inicio</span>
+            <InicioIcon class="w-icon h-icon" />
             <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
             </svg>
         </a> 
-       <a href="http://localhost:4321/contacto">Contacto
-            <svg id="contacto_icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-            </svg>
+       <a href="http://localhost:4321/contacto"><span>Contacto</span>
+            <ContactoIcon class="w-icon h-icon" />
         </a>
     </nav>
 </main>
@@ -27,12 +29,7 @@
 </html>
 
 <style>
-    #inicio_icon, #contacto_icon {
-        width: 30px;
-        height: 30px;
-        color: black;
-        
-    }
+    
     a {
         color:black;
         text-decoration: none;
@@ -76,4 +73,24 @@
         display: flex;
         float: right;
     }
+
+   a {
+    display: inline-block;
+    width: fit-content;
+   }
+
+    a span {
+        cursor: pointer;
+        display: inline-block;
+        text-indent: -9999px;
+    }
+
+
+  .w-icon {
+    width: 2rem;
+  }
+  .h-icon {
+    height: 2rem;
+  }
+
 </style>
