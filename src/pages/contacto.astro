@@ -2,6 +2,7 @@
 import Esqueleto from "../layouts/Esqueleto.astro";
 
 ---
+<header>Página de contacto.</header>
 <Esqueleto titulo="Página de Contacto" idioma="es">
         
         <form class="formulario-contacto">
@@ -12,7 +13,7 @@ import Esqueleto from "../layouts/Esqueleto.astro";
                 <label>Nombre: <input name="nombre" type="text" placeholder="María" required></label>
                 <label>Apellidos: <input name="apellido" type="text" placeholder="Duvale Barbeitos" required></label>
                 <label>Email: <input type="email" name="email" placeholder="maria@gmail.com" required></label>
-                <textarea rows="15" cols="30" placeholder="Deja aquí tu comentario"></textarea>
+                <textarea rows="15" cols="30" placeholder="Deja aquí tu comentario" aria-label="comentarios"></textarea>
             </fieldset>
             <fieldset class="botones">
                 <button type="reset" name="reset_btn" value="reset_btn">Reiniciar</button>
@@ -23,11 +24,20 @@ import Esqueleto from "../layouts/Esqueleto.astro";
 </Esqueleto> 
 
 <style>
+    header {
+        display:none
+    }
     #icon-pag-contact {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         
     }
+
+    legend #icon-pag-contact {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
     .formulario-contacto {
         display: flex;
         flex-direction: column;
