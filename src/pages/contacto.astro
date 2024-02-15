@@ -3,7 +3,7 @@ import Esqueleto from "../layouts/Esqueleto.astro";
 
 ---
 <Esqueleto titulo="Página de Contacto" idioma="es">
-    <header>Página de contacto.</header>
+    <head>Página de contacto.</head>
         
         <form class="formulario-contacto">
             <fieldset class="dts_prsonales">
@@ -19,6 +19,10 @@ import Esqueleto from "../layouts/Esqueleto.astro";
                 <button type="reset" name="reset_btn" value="reset_btn">Reiniciar</button>
                 <button type="submit" name="enviar_btn" value="enviar_btn">Enviar</button>
             </fieldset>
+            <label for="condiciones">
+                <input type="checkbox" id="condiciones" name="condiciones" required>
+                Acepto los <a href="#">términos y condiciones de privacidad</a>
+            </label>
         </form>
     
 </Esqueleto> 
