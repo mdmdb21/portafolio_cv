@@ -6,11 +6,11 @@ import Esqueleto from "../layouts/Esqueleto.astro";
         
         <form class="formulario-contacto">
             <fieldset class="dts_prsonales">
-                <legend class="titulo">Contacta conmigo!</legend>
+                <legend class="titulo">Contáctame</legend>
                 <label>Nombre: <input name="nombre" type="text" placeholder="María" required></label>
                 <label>Apellidos: <input name="apellido" type="text" placeholder="Duvale Barbeitos" required></label>
                 <label>Email: <input type="email" name="email" placeholder="maria@gmail.com" required></label>
-                <label><textarea rows="15" cols="30" placeholder="Deja aquí tu comentario"></textarea></label>
+                <textarea rows="15" cols="30" placeholder="Deja aquí tu comentario"></textarea>
             </fieldset>
             <fieldset class="botones">
                 <button type="reset" name="reset_btn" value="reset_btn">Reiniciar</button>
@@ -65,8 +65,5 @@ import Esqueleto from "../layouts/Esqueleto.astro";
         justify-content: space-around;  
         width: 40%;
     }
-      
 
-    
-    
 </style>
